@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
-
+import { useState } from "react";
 function Home() {
   const navigate = useNavigate();
 
@@ -24,21 +24,24 @@ function Connect() {
 }
 
 function Analytics() {
+  const [balance, setBalance] = useState(12450);
+const [income, setIncome] = useState(4200);
+const [expenses, setExpenses] = useState(2100);
   return (
     <div style={{ padding: 40 }}>
       <h1>📊 Analytics Dashboard</h1>
 
       <div style={{ marginTop: 20 }}>
         <div style={{ background: "#1e293b", padding: 20, marginBottom: 10 }}>
-          💰 Total Balance: $12,450
+          💰  Total Balance: {balance}
         </div>
 
         <div style={{ background: "#1e293b", padding: 20, marginBottom: 10 }}>
-          📈 Monthly Income: $4,200
+          📈 Monthly Income: {income}
         </div>
 
         <div style={{ background: "#1e293b", padding: 20 }}>
-          📉 Expenses: $2,100
+          📉 Expenses: {expenses}
         </div>
       </div>
     </div>
