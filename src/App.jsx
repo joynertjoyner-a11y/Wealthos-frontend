@@ -53,8 +53,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/connect" element={<Connect />} />
-        <Route path="/analytics" element={<Analytics />} />
+<Route path="/connect" element={<Connect />} />
+<Route path="/analytics" element={<Analytics />} />
       </Routes>
     </Router>
   );
