@@ -1,16 +1,11 @@
 function App() {
   return (
-    <div
-      style={{
-        minHeight: "100vh",
-        background: "#ffffff",
-        color: "#111111",
-        padding: 24,
-        fontFamily: "system-ui, Arial",
-        fontSize: 24,
-      }}
-    >
-      ✅ WealthOS is rendering!
+    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+      <h1>WealthOS Dashboard</h1>
+      <p>Welcome to your financial system.</p>
+
+      <button>Connect Bank</button>
+      <button style={{ marginLeft: "10px" }}>View Analytics</button>
     </div>
   );
 }
