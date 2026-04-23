@@ -1,58 +1,40 @@
-function App() {
+import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
 
-  const handleConnect = () => {
-    alert("Connecting bank...");
-  };
-
-  const handleAnalytics = () => {
-    alert("Opening analytics...");
-  };
+function Home() {
+  const navigate = useNavigate();
 
   return (
-    <div style={{
-      minHeight: "100vh",
-      backgroundColor: "#0f172a",
-      color: "white",
-      padding: "40px",
-      fontFamily: "Arial"
-    }}>
-      
-      <h1 style={{ fontSize: "32px", marginBottom: "10px" }}>
-        WealthOS Dashboard
-      </h1>
+    <div style={{ padding: 40 }}>
+      <h1>WealthOS Dashboard</h1>
+      <p>Welcome to your financial system.</p>
 
-      <p style={{ color: "#94a3b8", marginBottom: "30px" }}>
-        Welcome to your financial system.
-      </p>
+      <button onClick={() => navigate("/connect")}>
+        Connect Bank
+      </button>
 
-      <div style={{ display: "flex", gap: "10px" }}>
-        <button 
-          onClick={handleConnect}
-          style={{
-            padding: "10px 16px",
-            backgroundColor: "#22c55e",
-            border: "none",
-            borderRadius: "6px",
-            color: "white"
-          }}>
-          Connect Bank
-        </button>
-
-        <button 
-          onClick={handleAnalytics}
-          style={{
-            padding: "10px 16px",
-            backgroundColor: "#334155",
-            border: "none",
-            borderRadius: "6px",
-            color: "white"
-          }}>
-          View Analytics
-        </button>
-      </div>
-
+      <button onClick={() => navigate("/analytics")} style={{ marginLeft: 10 }}>
+        View Analytics
+      </button>
     </div>
   );
 }
 
-export default App;
+function Connect() {
+  return <h2>🔗 Bank Connection Page (coming soon)</h2>;
+}
+
+function Analytics() {
+  return <h2>📊 Analytics Dashboard (coming soon)</h2>;
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/connect" element={<Connect />} />
+        <Route path="/analytics" element={<Analytics />} />
+      </Routes>
+    </Router>
+  );
+}
