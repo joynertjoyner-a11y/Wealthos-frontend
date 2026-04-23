@@ -1,11 +1,43 @@
 function App() {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>WealthOS Dashboard</h1>
-      <p>Welcome to your financial system.</p>
+    <div style={{
+      minHeight: "100vh",
+      backgroundColor: "#0f172a",
+      color: "white",
+      padding: "40px",
+      fontFamily: "Arial"
+    }}>
+      
+      <h1 style={{ fontSize: "32px", marginBottom: "10px" }}>
+        WealthOS Dashboard
+      </h1>
 
-      <button>Connect Bank</button>
-      <button style={{ marginLeft: "10px" }}>View Analytics</button>
+      <p style={{ color: "#94a3b8", marginBottom: "30px" }}>
+        Welcome to your financial system.
+      </p>
+
+      <div style={{ display: "flex", gap: "10px" }}>
+        <button style={{
+          padding: "10px 16px",
+          backgroundColor: "#22c55e",
+          border: "none",
+          borderRadius: "6px",
+          color: "white"
+        }}>
+          Connect Bank
+        </button>
+
+        <button style={{
+          padding: "10px 16px",
+          backgroundColor: "#334155",
+          border: "none",
+          borderRadius: "6px",
+          color: "white"
+        }}>
+          View Analytics
+        </button>
+      </div>
+
     </div>
   );
 }
