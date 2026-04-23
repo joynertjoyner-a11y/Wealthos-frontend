@@ -24,7 +24,25 @@ function Connect() {
 }
 
 function Analytics() {
-  return <h2>📊 Analytics Dashboard (coming soon)</h2>;
+  return (
+    <div style={{ padding: 40 }}>
+      <h1>📊 Analytics Dashboard</h1>
+
+      <div style={{ marginTop: 20 }}>
+        <div style={{ background: "#1e293b", padding: 20, marginBottom: 10 }}>
+          💰 Total Balance: $12,450
+        </div>
+
+        <div style={{ background: "#1e293b", padding: 20, marginBottom: 10 }}>
+          📈 Monthly Income: $4,200
+        </div>
+
+        <div style={{ background: "#1e293b", padding: 20 }}>
+          📉 Expenses: $2,100
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function App() {
