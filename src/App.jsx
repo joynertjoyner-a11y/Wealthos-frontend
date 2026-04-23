@@ -1,4 +1,13 @@
 function App() {
+
+  const handleConnect = () => {
+    alert("Connecting bank...");
+  };
+
+  const handleAnalytics = () => {
+    alert("Opening analytics...");
+  };
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -17,23 +26,27 @@ function App() {
       </p>
 
       <div style={{ display: "flex", gap: "10px" }}>
-        <button style={{
-          padding: "10px 16px",
-          backgroundColor: "#22c55e",
-          border: "none",
-          borderRadius: "6px",
-          color: "white"
-        }}>
+        <button 
+          onClick={handleConnect}
+          style={{
+            padding: "10px 16px",
+            backgroundColor: "#22c55e",
+            border: "none",
+            borderRadius: "6px",
+            color: "white"
+          }}>
           Connect Bank
         </button>
 
-        <button style={{
-          padding: "10px 16px",
-          backgroundColor: "#334155",
-          border: "none",
-          borderRadius: "6px",
-          color: "white"
-        }}>
+        <button 
+          onClick={handleAnalytics}
+          style={{
+            padding: "10px 16px",
+            backgroundColor: "#334155",
+            border: "none",
+            borderRadius: "6px",
+            color: "white"
+          }}>
           View Analytics
         </button>
       </div>
